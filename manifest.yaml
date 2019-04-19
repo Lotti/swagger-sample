@@ -1,0 +1,14 @@
+applications:
+  - name: swagger-sample
+    command: npm start
+    disk_quota: 1G
+    instances: 1
+    memory: 256M
+    buildpacks:
+      - nodejs_buildpack
+    routes:
+      - route: swagger-sample.eu-de.mybluemix.net
+    env:
+      NODE_ENV: production
+      NODE_MODULES_CACHE: true
+      OPTIMIZE_MEMORY: true
